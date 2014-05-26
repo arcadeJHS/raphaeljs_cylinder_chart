@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cylinder Graph</title>
+	</head>
+    <body>
+		<div style="position: relative;">
+			<div id="graph_1" style="box-sizing: border-box; width: 380px; height: 160px;"></div>
+		</div>
+
+		
+		<!-- javascript -->
+		<script src="raphael-min.js"></script>
+		<script src="cylinder.js"></script>
+		
+		<script>
+			window.onload = function() {
+			
+				var options = {
+					//height: 160,
+					//width: 100,
+					values: [0.1, 0.3, 0.1],
+					points: [
+						{value: 0.1, callout: "Label for chart segment 1", pointerOnTop: true},
+						{value: 0.3, arrowBox: "XXX value", href:"http://www.google.com"},
+						{value: 0.1, callout: "Label fro chart segment 2", calloutPosition: 'top'}
+					]
+				};	
+
+				var graph_1 = Cylinder.plot("graph_1", options);			
+				
+			};
+		</script>
+    </body>
+</html>
